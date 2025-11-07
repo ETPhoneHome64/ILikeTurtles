@@ -1,13 +1,13 @@
 import turtle
+screen=turtle.Screen()
+screen.setup(width=1.0, height=1.0)
 tu = turtle.Turtle()
+screen.bgcolor("SkyBlue")
 def main():
     tu.shape("turtle")
     tu.fillcolor("red")
     tu.speed(0)
     tu.color("black")
-    screen=turtle.Screen()
-    screen.bgcolor("DarkSlateGray")
-    screen.setup(width=1.0, height=1.0)
     tu.left(90)
     tu.fillcolor("LightCyan")
     tu.begin_fill()
@@ -30,7 +30,6 @@ def main():
     tu.teleport(500,-500)
     tu.left(180)
     flower("RoyalBlue2","RoyalBlue3")
-    turtle.done()
 def ghost():
     ghost_body()
     tu.speed(10)
@@ -45,6 +44,7 @@ def ghost():
     tu.begin_fill()
     tu.circle(20)
     tu.end_fill()
+    screen.bgcolor("DarkSlateGray")
 def ghost_body():
     head()
     half_cir_left()
@@ -83,6 +83,7 @@ def moon():
     tu.begin_fill()
     tu.circle(150, 180)
     tu.end_fill()
+    screen.bgcolor("DarkSlateGray")
 def g_rave():
     tu.pensize(1)
     tu.setheading(90)
@@ -166,3 +167,4 @@ def flower(color,colorDark):
     tu.end_fill()
 if __name__ == "__main__":
     main()
+turtle.done()
