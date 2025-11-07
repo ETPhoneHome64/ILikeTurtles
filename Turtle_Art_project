@@ -1,0 +1,168 @@
+import turtle
+tu = turtle.Turtle()
+def main():
+    tu.shape("turtle")
+    tu.fillcolor("red")
+    tu.speed(0)
+    tu.color("black")
+    screen=turtle.Screen()
+    screen.bgcolor("DarkSlateGray")
+    screen.setup(width=1.0, height=1.0)
+    tu.left(90)
+    tu.fillcolor("LightCyan")
+    tu.begin_fill()
+    ghost()
+    tu.teleport(90,-50)
+    tu.pensize(5)
+    tu.forward(180)
+    g_rave()
+    grass_rectangle()
+    tu.forward(100)
+    flower("Brown2","Brown3")
+    tu.teleport(-500,500)
+    moon()
+    tu.teleport(-800,-500)
+    tu.right(180)
+    flower("SlateBlue2", "SlateBlue")
+    tu.teleport(800,-500)
+    tu.right(180)
+    flower("HotPink", "HotPink3")
+    tu.teleport(500,-500)
+    tu.left(180)
+    flower("RoyalBlue2","RoyalBlue3")
+    turtle.done()
+def ghost():
+    ghost_body()
+    tu.speed(10)
+    tu.goto(0,0)
+    tu.end_fill()
+    tu.teleport(120,0)
+    tu.fillcolor("black")
+    tu.begin_fill()
+    tu.circle(20)
+    tu.end_fill()
+    tu.teleport(240,0)
+    tu.begin_fill()
+    tu.circle(20)
+    tu.end_fill()
+def ghost_body():
+    head()
+    half_cir_left()
+    tu.right(90)
+    half_cir_shortRight()
+    quart_cir_shortLeft()
+    tu.forward(200)
+    tu.right(110)
+    tu.forward(191.55)
+    tu.right(20)
+    tu.forward(200)
+    quart_cir_shortLeft()
+    half_cir_shortRight()
+    tu.right(120)
+    half_cir_left()
+    tu.setheading(90)
+    tu.right(90)
+    tu.forward(50)
+def half_cir_right():
+    for c in range (181):
+        tu.forward(1)
+        tu.right(1)
+    c=1
+def moon():
+    tu.pencolor("White")
+    tu.fillcolor("Red")
+    tu.begin_fill()
+    tu.circle(150, 180)
+    tu.left(90)
+    tu.forward(300)
+    tu.end_fill()
+    tu.back(300)
+    tu.right(90)
+    tu.pencolor("Black")
+    tu.fillcolor("Black")
+    tu.begin_fill()
+    tu.circle(150, 180)
+    tu.end_fill()
+def g_rave():
+    tu.pensize(1)
+    tu.setheading(90)
+    tu.fillcolor("Grey")
+    tu.teleport(-500,-500)
+    tu.begin_fill()
+    tu.forward(250)
+    tu.circle(100, 180)
+    tu.forward(250)
+    tu.left(90)
+    tu.forward(200)
+    tu.end_fill()
+def half_cir_rightLarge():
+    for c in range (181):
+        tu.forward(2)
+        tu.right(1)
+    c=1
+def half_cir_left():
+    for d in range (181):
+        tu.forward(1)
+        tu.left(1)
+    d=1
+def half_cir_leftLarge():
+    for g in range (181):
+        tu.forward(2)
+        tu.left(1)
+    g=1
+def head():
+    for i in range (181):
+        tu.forward(3)
+        tu.right(1)
+    i=1
+def half_cir_shortRight():
+    for a in range (101):
+        tu.forward(3)
+        tu.right(2)
+    a=1
+def half_cir_shortLeft():
+    for a in range (101):
+        tu.forward(3)
+        tu.left(2)
+    a=1
+def quart_cir_shortLeft():
+    for h in range (51):
+        tu.forward(2)
+        tu.left(2)
+    h=1
+def grass_rectangle():
+    tu.fillcolor("Green")
+    tu.pencolor("Green")
+    tu.begin_fill()
+    tu.forward(10000)
+    tu.right(90)
+    tu.speed(0)
+    tu.forward(300)
+    tu.right(90)
+    tu.forward(10500)
+    tu.right(90)
+    tu.forward(300)
+    tu.speed(10)
+    tu.right(90)
+    tu.forward(500)
+    tu.end_fill()
+def quart_cir_shortRight():
+    for h in range (51):
+        tu.forward(2)
+        tu.right(2)
+    h=1
+def flower(color,colorDark):
+    tu.pencolor("lime")
+    tu.left(90)
+    tu.pensize(3)
+    tu.forward(100)
+    tu.pensize(1)
+    tu.pencolor(colorDark)
+    tu.fillcolor(color)
+    tu.begin_fill()
+    tu.forward(100)
+    tu.left(90)
+    tu.circle(50)
+    tu.end_fill()
+if __name__ == "__main__":
+    main()
