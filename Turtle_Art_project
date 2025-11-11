@@ -167,6 +167,9 @@ def decorate():
     tu.teleport(500,-500)
     tu.left(180)
     flower("RoyalBlue2","RoyalBlue3")
+    tu.teleport(-50,-500)
+    tu.left(180)
+    flower("chocolate1","chocolate3")
 if __name__ == "__main__":
     main()
 turtle.done()
